@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <search></search>
+    <track-list></track-list>
   `
 })
 export class AppComponent { }

@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 // App components
 import {SearchComponent} from "./components/search/search.component";
 import {SoundCloudService} from "./services/sound-cloud.service";
+import {TrackListComponent} from "./components/track-list/track-list.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    TrackListComponent
   ],
   imports: [
     BrowserModule,
