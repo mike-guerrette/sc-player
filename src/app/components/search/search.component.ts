@@ -3,12 +3,7 @@ import {SoundCloudService} from "../../services/sound-cloud.service";
 
 @Component({
     selector: 'search',
-    templateUrl: 'search.component.html',
-    styles: [`
-      .search-bar {
-        margin: 75px 50px;
-      }
-    `]
+    templateUrl: 'search.component.html'
 })
 export class SearchComponent implements OnInit {
     constructor(private soundCloudService: SoundCloudService) { }

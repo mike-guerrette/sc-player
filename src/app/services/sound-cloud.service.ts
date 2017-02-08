@@ -13,6 +13,7 @@ export class SoundCloudService {
         let url = `http://api.soundcloud.com/tracks?q=${searchTerm || ''}&client_id=8e1349e63dfd43dc67a63e0de3befc68`;
         return this.http.get(url).map(res => {
             let body = res.json();
+            console.log(body[0])
             return body;
         }).catch(this.handleError);
     }

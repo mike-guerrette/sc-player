@@ -1,0 +1,26 @@
+
+$header-height: 30px;
+$footer-height: 50px;
+
+html, body {height:100%; margin:0; overflow:hidden;}
+
+#header {
+    position: fixed;
+    top: 0;
+    height: $header-height;
+}
+
+#footer {
+    position: fixed;
+    height: $footer-height;
+    bottom: $footer-height;
+}
+
+#content {
+    position: relative;
+    height: auto;
+    overflow-y: auto;
+    margin: 0 auto;
+    padding-top: $header-height;
+    padding-bottom: $footer-height;
+}

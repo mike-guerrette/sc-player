@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import {SearchComponent} from "./components/search/search.component";
 import {SoundCloudService} from "./services/sound-cloud.service";
 import {TrackListComponent} from "./components/track-list/track-list.component";
+import { PlayerComponent } from './components/player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    TrackListComponent
+    TrackListComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

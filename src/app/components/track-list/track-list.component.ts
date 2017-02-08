@@ -4,7 +4,8 @@ import {Observable} from "rxjs";
 
 @Component({
     selector: 'track-list',
-    templateUrl: './track-list.component.html'
+    templateUrl: './track-list.component.html',
+    styleUrls: ['./track-list.component.scss']
 })
 export class TrackListComponent implements OnInit {
     constructor(private soundCloudService: SoundCloudService) { }
@@ -12,9 +13,11 @@ export class TrackListComponent implements OnInit {
     private trackList: Observable<any>;
 
     ngOnInit() {
-        this.soundCloudService.searchTerm.subscribe(
-            searchTerm => this.trackList = this.soundCloudService.getTracks(searchTerm)
-        );
+        this.soundCloudService.searchTerm
+            .debounceTime(1000)
+            .subscribe(
+                searchTerm => this.trackList = this.soundCloudService.getTracks(searchTerm)
+            );
     }
 
 }

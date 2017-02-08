@@ -1,3 +1,6 @@
 <div *ngFor="let track of trackList | async">
-    {{track.title}}
+    <div class="row track">
+        <!--<div class="col-md-2"><img src="{{track.artwork_url || track.user.avatar_url}}"></div>-->
+        <div class="col-md-10 track-title">{{track.title}}</div>
+    <div>
 </div>
